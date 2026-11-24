@@ -1,42 +1,59 @@
 'use client';
 
-import { useSearchParams, useRouter } from 'next/navigation';
-import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useState, Suspense } from 'react';
 import { CheckCircle } from 'lucide-react';
+
+// Only allow http/https destinations (blocks javascript:, data:, etc.)
+function isHttpUrl(value: string): boolean {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
 
 function VerifyPageContent() {
   const searchParams = useSearchParams();
-  const router = useRouter();
-  const [phone, setPhone] = useState<string>('');
-  const [error, setError] = useState<string>('');
+  // Phone is prefilled from the `phone` URL parameter
+  const [phone, setPhone] = useState<string>(() => searchParams.get('phone') ?? '');
+  const [actionError, setActionError] = useState<string>('');
   const [isRedirecting, setIsRedirecting] = useState(false);
 
-  useEffect(() => {
-    // Get phone parameter from URL
-    const phoneParam = searchParams.get('phone');
-    
-    if (!phoneParam) {
+  // Validate the link itself (phone and destination must be present; destination http/https only)
+  const phoneParam = searchParams.get('phone');
+  const destinationParam = searchParams.get('destination');
+  let linkError = '';
+  if (!phoneParam) {
+    linkError = 'Invalid verification link. Phone number is missing.';
+  } else if (!destinationParam) {
+    linkError = 'Invalid verification link. Destination is missing.';
+  } else if (!isHttpUrl(destinationParam)) {
+    linkError = 'Invalid verification link. Destination must be an http or https URL.';
+  }
+  const error = linkError || actionError;
+  const setError = setActionError;
+
+  const handleConfirm = () => {
+    const destination = searchParams.get('destination');
+
+    if (!destination) {
+      setError('Invalid verification link. Destination is missing.');
+      return;
+    }
+
+    if (!isHttpUrl(destination)) {
+      setError('Invalid verification link. Destination must be an http or https URL.');
+      return;
+    }
+
+    if (!phone.trim()) {
       setError('Invalid verification link. Phone number is missing.');
       return;
     }
 
-    setPhone(phoneParam);
-  }, [searchParams]);
-
-  // Mask phone number to show only last 4 digits
-  const maskPhone = (phoneNumber: string): string => {
-    if (!phoneNumber) return '';
-    
-    // Remove any non-digit characters
-    const digits = phoneNumber.replace(/\D/g, '');
-    
-    if (digits.length < 4) return phoneNumber;
-    
-    const lastFour = digits.slice(-4);
-    return `(***) ***-${lastFour}`;
-  };
-
-  const handleConfirm = () => {
+    setError('');
     setIsRedirecting(true);
 
     // Build redirect URL with all parameters except 'phone'
@@ -48,31 +65,22 @@ function VerifyPageContent() {
       }
     });
 
-    // Get destination URL
-    const destination = searchParams.get('destination');
-    
-    if (destination) {
-      // Redirect to explicit destination with parameters
-      const redirectUrl = `${destination}?${params.toString()}`;
-      window.location.href = redirectUrl;
-    } else {
-      // If no destination, show error
-      setError('Invalid verification link. Destination is missing.');
-      setIsRedirecting(false);
-    }
+    // Redirect to explicit destination with parameters
+    const redirectUrl = `${destination}?${params.toString()}`;
+    window.location.href = redirectUrl;
   };
 
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] flex items-center justify-center px-4 py-8">
-      <div className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 relative before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1.5 before:bg-[#EFE810] before:rounded-t-2xl">
+    <div className="min-h-screen bg-light-bg flex items-center justify-center px-4 py-8">
+      <div className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 relative before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1.5 before:bg-primary before:rounded-t-2xl">
         {/* Verification Content */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-[#EFE810] rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-12 h-12 text-[#1A1A1A]" />
+          <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-12 h-12 text-white" />
           </div>
           
-          <h2 className="text-xl sm:text-2xl font-bold text-[#1A1A1A] mb-6 px-2">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-6 px-2">
             Validate your number.
           </h2>
           
@@ -83,9 +91,13 @@ function VerifyPageContent() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Enter phone number"
-              className="w-full bg-gray-50 rounded-lg p-3 sm:p-4 text-lg sm:text-xl font-bold text-[#1A1A1A] tracking-wider text-center border-2 border-[#E5E7EB] focus:border-[#EFE810] focus:outline-none transition-colors"
+              className="w-full bg-light-bg rounded-lg p-3 sm:p-4 text-lg sm:text-xl font-bold text-foreground tracking-wider text-center border-2 border-[#E5E7EB] focus:border-primary focus:outline-none transition-colors"
             />
           </div>
+
+          {error && (
+            <p className="text-red-500 text-sm mb-4 font-medium" role="alert">{error}</p>
+          )}
 
           {/* Confirm Button */}
           <button
@@ -94,7 +106,7 @@ function VerifyPageContent() {
             className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 ${
               isRedirecting
                 ? 'bg-gray-400 cursor-not-allowed text-white'
-                : 'bg-[#EFE810] hover:bg-[#d4cd00] text-[#1A1A1A] shadow-lg hover:shadow-xl !cursor-pointer'
+                : 'bg-primary hover:bg-primary-hover text-white shadow-lg hover:shadow-xl !cursor-pointer'
             }`}
           >
             {isRedirecting ? (
@@ -113,8 +125,8 @@ function VerifyPageContent() {
 
         {/* Footer */}
         <div className="text-center pt-6 border-t border-[#E5E7EB]">
-          <p className="text-xs text-[#555555]">
-            Secured by Volt Internal Comms
+          <p className="text-xs text-[#475569]">
+            Secured by Loyalty Perks Hub
           </p>
         </div>
       </div>
@@ -125,10 +137,10 @@ function VerifyPageContent() {
 export default function VerifyPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-[#F9F9F9] flex items-center justify-center">
+      <div className="min-h-screen bg-light-bg flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#EFE810] mx-auto"></div>
-          <p className="mt-4 text-[#555555]">Loading...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
+          <p className="mt-4 text-[#475569]">Loading...</p>
         </div>
       </div>
     }>

@@ -2,13 +2,17 @@
 
 :root {
   --background: #FFFFFF;
-  --foreground: #1A1A1A;
-  --primary: #EFE810;
-  --primary-hover: #d4cd00;
-  --accent-soft: #F5F2C8;
-  --bg-light: #F9F9F9;
-  --text-headline: #1A1A1A;
-  --text-body: #555555;
+  --foreground: #0F172A;
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --secondary: #10B981;
+  --secondary-hover: #059669;
+  --accent: #F59E0B;
+  --accent-soft: #EFF6FF;
+  --light-bg: #F8FAFC;
+  --bg-light: #F8FAFC;
+  --text-headline: #0F172A;
+  --text-body: #475569;
 }
 
 @theme inline {
@@ -16,7 +20,11 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-light-bg: var(--light-bg);
   --color-bg-light: var(--bg-light);
   --color-text-headline: var(--text-headline);
   --color-text-body: var(--text-body);
@@ -27,7 +35,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #FFFFFF;
-    --foreground: #1A1A1A;
+    --foreground: #0F172A;
   }
 }
 
@@ -39,9 +47,9 @@ body {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(239, 232, 16, 0.4), 0 0 40px rgba(239, 232, 16, 0.2);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4), 0 0 40px rgba(37, 99, 235, 0.2);
   }
   50% {
-    box-shadow: 0 0 30px rgba(239, 232, 16, 0.6), 0 0 60px rgba(239, 232, 16, 0.3);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.6), 0 0 60px rgba(37, 99, 235, 0.3);
   }
 }

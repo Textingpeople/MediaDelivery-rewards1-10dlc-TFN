@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Shield, Target, Users, TrendingUp, Award, BarChart3 } from 'lucide-react';
+import { Shield, Target, Users, TrendingUp, Award, BarChart3, Heart } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -10,28 +10,28 @@ export default function AboutPage() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
-                <span className="text-2xl font-extrabold text-[#1A1A1A] tracking-tight">Volt Internal Comms</span>
+                <span className="text-2xl font-extrabold text-foreground tracking-tight">Loyalty Perks Hub</span>
               </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Home
                 </Link>
-                <Link href="/about" className="text-[#1A1A1A] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/about" className="text-primary font-semibold hover:text-primary-hover px-3 py-2 rounded-md text-sm font-medium">
                   About
                 </Link>
-                <Link href="/privacy" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/privacy" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Privacy
                 </Link>
-                <Link href="/terms" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/terms" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Terms
                 </Link>
-                <Link href="/contact" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/contact" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Contact
                 </Link>
-                <Link href="/signup" className="bg-[#EFE810] text-[#1A1A1A] hover:bg-[#d4cd00] px-4 py-2 rounded-md text-sm font-semibold">
-                  Request Access
+                <Link href="/signup" className="bg-primary text-white hover:bg-primary-hover px-4 py-2 rounded-md text-sm font-semibold">
+                  Employee Sign Up
                 </Link>
               </div>
             </div>
@@ -40,14 +40,14 @@ export default function AboutPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-[#F9F9F9] py-20">
+      <section className="bg-light-bg py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-extrabold text-[#1A1A1A] mb-6">
-              About Volt Internal Comms
+            <h1 className="text-5xl font-extrabold text-foreground mb-6">
+              About Loyalty Perks Hub
             </h1>
-            <p className="text-xl text-[#555555] max-w-3xl mx-auto">
-              We&apos;re building the future of employee engagement — helping companies of all sizes create recognition programs that actually work, drive retention, and turn employees into advocates.
+            <p className="text-xl text-[#475569] max-w-3xl mx-auto">
+              Loyalty Perks Hub is an employee recognition and rewards platform that employers provide to their teams, so great work gets noticed and celebrated.
             </p>
           </div>
         </div>
@@ -57,55 +57,55 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-[#1A1A1A] mb-6">Our Mission</h2>
-            <p className="text-lg text-[#555555] mb-4">
-              Volt Internal Comms was built to solve a fundamental workplace problem: companies spend enormous resources acquiring talent, yet invest almost nothing in keeping employees engaged, recognized, and motivated to stay.
+            <h2 className="text-4xl font-bold text-foreground mb-6">Our Mission</h2>
+            <p className="text-lg text-[#475569] mb-4">
+              Loyalty Perks Hub was built around a simple idea: people do their best work when they feel seen. Too often, good work goes unnoticed until an annual review, if it is noticed at all.
             </p>
-            <p className="text-lg text-[#555555] mb-4">
-              We provide a simple, powerful employee engagement platform that makes it easy to recognize effort, reward performance, and build a culture people genuinely love — from day one through every milestone.
+            <p className="text-lg text-[#475569] mb-4">
+              We make it easy for peers and managers to recognize effort as it happens, from a quick shout-out to a work-anniversary badge. &quot;Loyalty&quot; here means employee loyalty: the connection people build with their team and their workplace.
             </p>
-            <p className="text-lg text-[#555555]">
-              Our goal is to make enterprise-grade engagement programs accessible to every workplace — from small teams to large enterprises.
+            <p className="text-lg text-[#475569]">
+              Our goal is to make thoughtful recognition accessible to every workplace, from small teams to large enterprises, in the office or remote.
             </p>
           </div>
-          <div className="bg-[#F9F9F9] rounded-2xl p-8 border border-[#E5E7EB]">
+          <div className="bg-light-bg rounded-2xl p-8 border border-[#E5E7EB]">
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-[#EFE810] rounded-full flex items-center justify-center">
-                    <Target className="w-6 h-6 text-[#1A1A1A]" />
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                    <Target className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Results-Driven</h3>
-                  <p className="text-[#555555]">
-                    Every feature is built to drive measurable outcomes — higher engagement, lower turnover, and stronger team culture.
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Recognition-Focused</h3>
+                  <p className="text-[#475569]">
+                    Every feature is built around making recognition timely, genuine and easy to give and receive.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-[#EFE810] rounded-full flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-[#1A1A1A]" />
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Privacy First</h3>
-                  <p className="text-[#555555]">
-                    Employee data is protected with enterprise-grade security. We never sell employee data to third parties.
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Privacy First</h3>
+                  <p className="text-[#475569]">
+                    Recognition history and points are private to the employee and their employer&apos;s program, and are never sold.
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-[#EFE810] rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-6 h-6 text-[#1A1A1A]" />
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Built to Scale</h3>
-                  <p className="text-[#555555]">
-                    Start with a simple recognition program and grow into advanced tiers, segmentation, and team-wide automation.
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Built to Scale</h3>
+                  <p className="text-[#475569]">
+                    Start with simple shout-outs and grow into milestone celebrations, perks and team-wide participation.
                   </p>
                 </div>
               </div>
@@ -114,54 +114,77 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="bg-[#F9F9F9] py-20">
+      {/* Our Story Section */}
+      <section className="bg-light-bg py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#1A1A1A] mb-4">Why Companies Choose Volt Internal Comms</h2>
-            <p className="text-xl text-[#555555]">
-              Trusted by teams that understand the value of keeping employees engaged and recognized
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Why Recognition Matters</h2>
+            <p className="text-xl text-[#475569]">
+              Feeling appreciated at work changes how people show up. A timely thank-you tells someone their effort mattered, strengthens bonds between teammates and makes it easier for remote and hybrid teams to feel connected.
             </p>
+          </div>
+
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-foreground">How Loyalty Perks Hub Works</h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white rounded-xl border border-[#E5E7EB] p-8">
+              <h4 className="text-xl font-bold text-foreground mb-4">For Employers</h4>
+              <ul className="space-y-3 text-[#475569]">
+                <li>Provide Loyalty Perks Hub to your team and share your Company ID with employees.</li>
+                <li>Choose the perks points can be redeemed for, such as extra PTO, team experiences or company swag.</li>
+                <li>Enable peer-to-peer and manager-led recognition, plus birthday and work-anniversary celebrations.</li>
+                <li>See anonymous, aggregate team engagement analytics.</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl border border-[#E5E7EB] p-8">
+              <h4 className="text-xl font-bold text-foreground mb-4">For Employees</h4>
+              <ul className="space-y-3 text-[#475569]">
+                <li>Sign up with the Company ID your employer provided.</li>
+                <li>Give and receive shout-outs and badges, including milestone badges for birthdays and work anniversaries.</li>
+                <li>Earn points from recognition and redeem them for perks your employer chooses.</li>
+                <li>Look back on your recognition history, which stays private to you and your employer&apos;s program.</li>
+                <li>Choose whether to receive SMS and email notifications.</li>
+              </ul>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-[#EFE810] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-[#1A1A1A]" />
+              <div className="bg-secondary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Flexible Recognition</h3>
-              <p className="text-[#555555]">
-                Points, badges, peer shoutouts, milestone rewards — build the program that fits your culture.
+              <h3 className="text-lg font-semibold text-foreground mb-2">Peer &amp; Manager Recognition</h3>
+              <p className="text-[#475569]">
+                Shout-outs and badges from teammates and managers, the moment great work happens.
               </p>
             </div>
-
             <div className="text-center">
-              <div className="bg-[#EFE810] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart3 className="w-8 h-8 text-[#1A1A1A]" />
+              <div className="bg-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-foreground" />
               </div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Engagement Analytics</h3>
-              <p className="text-[#555555]">
-                Understand exactly which programs drive the most participation, morale, and retention.
+              <h3 className="text-lg font-semibold text-foreground mb-2">Milestone Celebrations</h3>
+              <p className="text-[#475569]">
+                Birthdays and work anniversaries are celebrated with milestone badges.
               </p>
             </div>
-
             <div className="text-center">
-              <div className="bg-[#EFE810] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-[#1A1A1A]" />
+              <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Multi-Team Support</h3>
-              <p className="text-[#555555]">
-                Run engagement programs across multiple departments, locations, or remote teams from one dashboard.
+              <h3 className="text-lg font-semibold text-foreground mb-2">Remote &amp; Hybrid Friendly</h3>
+              <p className="text-[#475569]">
+                Virtual shout-outs and badges keep distributed teams connected.
               </p>
             </div>
-
             <div className="text-center">
-              <div className="bg-[#EFE810] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-[#1A1A1A]" />
+              <div className="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">Easy Onboarding</h3>
-              <p className="text-[#555555]">
-                Employees join with a simple Company ID — no complex setup, no IT required.
+              <h3 className="text-lg font-semibold text-foreground mb-2">Team Analytics</h3>
+              <p className="text-[#475569]">
+                Anonymous, aggregate engagement analytics for employers.
               </p>
             </div>
           </div>
@@ -169,98 +192,73 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#1A1A1A] py-20">
+      <section className="bg-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Build a Culture People Love?
+            Ready to Recognize Great Work?
           </h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Join companies using Volt Internal Comms to recognize, reward, and retain their best people. Request access today.
+            Sign up with the Company ID your employer provided and start giving and receiving recognition.
           </p>
           <Link
             href="/signup"
-            className="inline-block px-8 py-4 bg-[#EFE810] text-[#1A1A1A] text-lg font-semibold rounded-lg hover:bg-[#d4cd00] transition-colors shadow-lg"
+            className="inline-block px-8 py-4 bg-primary text-white text-lg font-semibold rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
           >
-            Request Access
+            Employee Sign Up
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1A1A1A] text-white py-12">
+      <footer className="bg-foreground text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <span className="text-2xl font-extrabold text-white tracking-tight">Volt Internal Comms</span>
+              <span className="text-2xl font-extrabold text-white tracking-tight">Loyalty Perks Hub</span>
               <p className="text-gray-400 mt-3">
-                Employee engagement software that drives real culture.
+                Employee recognition and rewards, provided by your employer.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/signup" className="text-gray-400 hover:text-white">
-                    Request Access
-                  </Link>
-                </li>
+                <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
+                <li><Link href="/signup" className="text-gray-400 hover:text-white">Employee Sign Up</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/privacy" className="text-gray-400 hover:text-white">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-gray-400 hover:text-white">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/sms-policy" className="text-gray-400 hover:text-white">
-                    SMS Policy
-                  </Link>
-                </li>
+                <li><Link href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
+                <li><Link href="/sms-policy" className="text-gray-400 hover:text-white">SMS Policy</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <p className="text-gray-400">
-                support@tryvoltinternalcomms.com
+                <a href="mailto:support@loyaltyperkshub.com" className="text-gray-400 hover:text-white">support@loyaltyperkshub.com</a>
               </p>
               <p className="text-gray-400 mt-1">
-                (720) 583-4916
+                <a href="tel:+19083998307" className="text-gray-400 hover:text-white">(908) 399-8307</a>
               </p>
               <p className="text-gray-400 mt-2 text-sm">
-                2241 Ridgewood Ave, Suite 108<br />
-                Denver, CO 80203<br />
+                9 Johnston Dr<br />
+                Bloomsbury, NJ 08804<br />
                 United States
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400">
-            <p>&copy; 2026 Volt Internal Comms. All rights reserved.</p>
-            <div className="flex items-center gap-4">
-              {/* LinkedIn */}
-              <a href="https://www.linkedin.com/company/voltinternalcomms/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              {/* Google */}
-              <a href="https://share.google/Nl9xEk7kfvDH5ZuOs" target="_blank" rel="noopener noreferrer" aria-label="Google" className="text-gray-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
-                </svg>
-              </a>
+          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col gap-3 text-gray-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Media Delivery Solutions LLC, d/b/a Loyalty Perks Hub. All rights reserved.</p>
+            <p>
+              9 Johnston Dr, Bloomsbury, NJ 08804, United States · <a href="tel:+19083998307" className="text-gray-400 hover:text-white">(908) 399-8307</a>
+            </p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <Link href="/terms" className="text-gray-400 hover:text-white">Terms</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link href="/sms-policy" className="text-gray-400 hover:text-white">SMS Policy</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
             </div>
           </div>
         </div>

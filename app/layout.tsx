@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RewardHub — Employee Engagement Platform",
-  description: "Recognize effort, reward performance, and build a culture people love. RewardHub is the employee engagement platform that drives real recognition, reduces turnover, and keeps your team motivated.",
-  keywords: "employee recognition, employee rewards, workplace culture, team engagement, HR software",
+  title: "Loyalty Perks Hub — Employee Recognition & Rewards",
+  description: "Loyalty Perks Hub is an employee recognition and rewards platform employers use to celebrate milestones, peer shout-outs and team wins.",
+  keywords: "employee recognition, employee rewards, workplace culture, team engagement, peer shout-outs",
   openGraph: {
-    title: "RewardHub — Employee Engagement Platform",
-    description: "Recognize effort, reward performance, and build a culture people love. The employee engagement platform that drives real recognition and reduces turnover.",
-    url: "https://tryrewardhub.com",
-    siteName: "RewardHub",
+    title: "Loyalty Perks Hub — Employee Recognition & Rewards",
+    description: "Loyalty Perks Hub is an employee recognition and rewards platform employers use to celebrate milestones, peer shout-outs and team wins.",
+    url: "https://loyaltyperkshub.com",
+    siteName: "Loyalty Perks Hub",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "RewardHub — Employee Engagement Platform",
+        alt: "Loyalty Perks Hub — Employee Recognition & Rewards",
       },
     ],
     locale: "en_US",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "RewardHub — Employee Engagement Platform",
-    description: "Recognize effort, reward performance, and build a culture people love.",
+    title: "Loyalty Perks Hub — Employee Recognition & Rewards",
+    description: "Loyalty Perks Hub is an employee recognition and rewards platform employers use to celebrate milestones, peer shout-outs and team wins.",
     images: ["/logo.png"],
   },
   robots: {
@@ -56,20 +56,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLGG52GZ09"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YLGG52GZ09');
-            `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

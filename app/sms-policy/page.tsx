@@ -9,28 +9,28 @@ export default function SmsPolicyPage() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
-                <span className="text-2xl font-extrabold text-[#1A1A1A] tracking-tight">Volt Internal Comms</span>
+                <span className="text-2xl font-extrabold text-foreground tracking-tight">Loyalty Perks Hub</span>
               </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Home
                 </Link>
-                <Link href="/about" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/about" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   About
                 </Link>
-                <Link href="/privacy" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/privacy" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Privacy
                 </Link>
-                <Link href="/terms" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/terms" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Terms
                 </Link>
-                <Link href="/contact" className="text-[#555555] hover:text-[#1A1A1A] px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/contact" className="text-[#475569] hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
                   Contact
                 </Link>
-                <Link href="/signup" className="bg-[#EFE810] text-[#1A1A1A] hover:bg-[#d4cd00] px-4 py-2 rounded-md text-sm font-semibold">
-                  Request Access
+                <Link href="/signup" className="bg-primary text-white hover:bg-primary-hover px-4 py-2 rounded-md text-sm font-semibold">
+                  Employee Sign Up
                 </Link>
               </div>
             </div>
@@ -39,11 +39,11 @@ export default function SmsPolicyPage() {
       </nav>
 
       {/* Header */}
-      <section className="bg-[#F9F9F9] py-12">
+      <section className="bg-light-bg py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">SMS Policy</h1>
-          <p className="text-lg text-gray-600">
-            Last Updated: June 3, 2026
+          <h1 className="text-4xl font-extrabold text-foreground mb-4">SMS Policy</h1>
+          <p className="text-lg text-[#475569]">
+            Last Updated: November 24, 2026
           </p>
         </div>
       </section>
@@ -52,48 +52,74 @@ export default function SmsPolicyPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none">
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Overview</h2>
-          <p className="text-gray-600 mb-6">
-            Volt Internal Comms is committed to responsible and transparent SMS communications. This page describes how and when we use SMS (text messaging) to communicate with our users.
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Overview</h2>
+          <p className="text-[#475569] mb-6">
+            Media Delivery Solutions LLC, a Wyoming limited liability company, d/b/a Loyalty Perks Hub (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to responsible and transparent SMS communications. This page describes how and when we use SMS (text messaging) to communicate with users of Loyalty Perks Hub, the employee recognition and rewards platform that employers provide to their teams.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What We Send</h2>
-          <p className="text-gray-600 mb-6">
-            Volt Internal Comms <strong>only sends alert related text messages</strong> via SMS. We do not send marketing, promotional, or advertising messages of any kind.
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What We Send</h2>
+          <p className="text-[#475569] mb-4">
+            We send two types of text messages. You may opt in to each type separately:
+          </p>
+          <ul className="list-disc pl-6 text-[#475569] mb-6 space-y-2">
+            <li><strong>Account Notifications:</strong> recognition alerts, milestone and anniversary notices, points updates and account updates.</li>
+            <li><strong>Promotional:</strong> new perks in your company&apos;s catalog and monthly team challenges.</li>
+          </ul>
+          <p className="text-[#475569] mb-6">
+            Texts never include points balances tied to cash, account numbers or SSNs.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Opt-In</h2>
-          <p className="text-gray-600 mb-6">
-            SMS notifications are optional. You may opt in to receive transactional SMS messages during the account registration process by checking the SMS opt-in box. Opting in is not required to use the Volt Internal Comms platform.
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Opt-In</h2>
+          <p className="text-[#475569] mb-6">
+            SMS messages are optional. During sign-up you may check one or both of two separate, unchecked boxes: one for Transactional Account Notification SMS messages and one for Promotional Marketing SMS messages. A mobile number is required only if you check either box. Opting in is not required to submit the sign-up form or to use the Loyalty Perks Hub platform.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Opt-Out</h2>
-          <p className="text-gray-600 mb-6">
-            You may opt out of SMS notifications at any time by replying <strong>STOP</strong> to any message you receive from us. After opting out, you will no longer receive SMS messages from Volt Internal Comms. To re-enable SMS notifications, contact us at <a href="mailto:support@tryvoltinternalcomms.com" className="text-[#1A1A1A] hover:text-[#555555]">support@tryvoltinternalcomms.com</a>.
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Opt-Out</h2>
+          <p className="text-[#475569] mb-6">
+            You may opt out of SMS messages at any time by replying <strong>STOP</strong> to any message you receive from us. After opting out, you will no longer receive SMS messages from Loyalty Perks Hub. To re-subscribe, opt in again through the sign-up form or contact us at <a href="mailto:support@loyaltyperkshub.com" className="text-primary hover:text-primary-hover">support@loyaltyperkshub.com</a>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Help</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Help</h2>
+          <p className="text-[#475569] mb-6">
             For help with SMS messages, reply <strong>HELP</strong> to any message or contact us at:
           </p>
-          <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <p className="text-gray-600 mb-2"><strong>Email:</strong> <a href="mailto:support@tryvoltinternalcomms.com" className="text-[#1A1A1A] hover:text-[#555555]">support@tryvoltinternalcomms.com</a></p>
-            <p className="text-gray-600"><strong>Phone:</strong> <a href="tel:+17205834916" className="text-[#1A1A1A] hover:text-[#555555]">(720) 583-4916</a></p>
+          <div className="bg-light-bg rounded-lg p-6 mb-8">
+            <p className="text-[#475569] mb-2"><strong>Media Delivery Solutions LLC</strong></p>
+            <p className="text-[#475569] mb-2"><strong>Address:</strong> 9 Johnston Dr, Bloomsbury, NJ 08804, United States</p>
+            <p className="text-[#475569] mb-2"><strong>Phone:</strong> <a href="tel:+19083998307" className="text-primary hover:text-primary-hover">(908) 399-8307</a></p>
+            <p className="text-[#475569] mb-2"><strong>Email:</strong> <a href="mailto:support@loyaltyperkshub.com" className="text-primary hover:text-primary-hover">support@loyaltyperkshub.com</a></p>
+            <p className="text-[#475569]"><strong>Website:</strong> <a href="https://loyaltyperkshub.com" className="text-primary hover:text-primary-hover">loyaltyperkshub.com</a></p>
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Message & Data Rates</h2>
-          <p className="text-gray-600 mb-6">
-            Message and data rates may apply depending on your mobile carrier and plan. Message frequency varies based on your account activity. Volt Internal Comms is not responsible for any charges incurred from your mobile carrier.
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Message &amp; Data Rates</h2>
+          <p className="text-[#475569] mb-6">
+            Message and data rates may apply depending on your mobile carrier and plan. Message frequency varies. Loyalty Perks Hub is not responsible for any charges incurred from your mobile carrier.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Data Privacy</h2>
-          <p className="text-gray-600 mb-6">
-            <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> Your phone number and SMS opt-in status are used solely to deliver alert related text messages as described in this policy and our{' '}
-            <Link href="/privacy" className="text-[#1A1A1A] hover:text-[#555555] underline">Privacy Policy</Link>.
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Data Privacy</h2>
+          <p className="text-[#475569] mb-6">
+            <strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</strong> Your phone number and SMS opt-in status are used solely to deliver the text messages described in this policy and our{' '}
+            <Link href="/privacy" className="text-primary hover:text-primary-hover underline">Privacy Policy</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Carrier Disclaimer</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Sample Messages</h2>
+          <p className="text-[#475569] mb-4">
+            Examples of the text messages you may receive from Loyalty Perks Hub if you opt in:
+          </p>
+          <p className="text-foreground font-semibold mb-2">Account Notifications</p>
+          <ul className="space-y-3 mb-6">
+            <li className="bg-light-bg rounded-lg p-4 text-[#475569]">1. Loyalty Perks Hub: You&apos;re signed up for recognition alerts from your employer&apos;s rewards program. Msg frequency varies. Msg & data rates may apply. Reply HELP for help, STOP to opt out.</li>
+            <li className="bg-light-bg rounded-lg p-4 text-[#475569]">2. Loyalty Perks Hub: A teammate just recognized your work! See your shout-out at loyaltyperkshub.com. Reply STOP to opt out.</li>
+            <li className="bg-light-bg rounded-lg p-4 text-[#475569]">3. Loyalty Perks Hub: Happy work anniversary! Your milestone badge is waiting at loyaltyperkshub.com. Reply STOP to opt out.</li>
+          </ul>
+          <p className="text-foreground font-semibold mb-2">Promotional</p>
+          <ul className="space-y-3 mb-6">
+            <li className="bg-light-bg rounded-lg p-4 text-[#475569]">4. Loyalty Perks Hub: New in your company&apos;s perks catalog: team experience days. See details at loyaltyperkshub.com. Reply STOP to opt out.</li>
+            <li className="bg-light-bg rounded-lg p-4 text-[#475569]">5. Loyalty Perks Hub: This month&apos;s team challenge: give 3 peer shout-outs. Join at loyaltyperkshub.com. Reply STOP to opt out.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Carrier Disclaimer</h2>
+          <p className="text-[#475569] mb-6">
             Carriers are not liable for delayed or undelivered messages. Delivery of SMS messages is subject to your mobile carrier&apos;s network availability and coverage.
           </p>
 
@@ -101,20 +127,20 @@ export default function SmsPolicyPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1A1A1A] text-white py-12 mt-20">
+      <footer className="bg-foreground text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <span className="text-2xl font-extrabold text-white tracking-tight">Volt Internal Comms</span>
+              <span className="text-2xl font-extrabold text-white tracking-tight">Loyalty Perks Hub</span>
               <p className="text-gray-400 mt-3">
-                Employee engagement software that drives real culture.
+                Employee recognition and rewards, provided by your employer.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-                <li><Link href="/signup" className="text-gray-400 hover:text-white">Request Access</Link></li>
+                <li><Link href="/signup" className="text-gray-400 hover:text-white">Employee Sign Up</Link></li>
               </ul>
             </div>
             <div>
@@ -127,31 +153,29 @@ export default function SmsPolicyPage() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
-              <p className="text-gray-400">support@tryvoltinternalcomms.com</p>
-              <p className="text-gray-400 mt-1 text-sm">(720) 583-4916</p>
-              <p className="text-gray-400 mt-1">(720) 583-4916</p>
+              <p className="text-gray-400">
+                <a href="mailto:support@loyaltyperkshub.com" className="text-gray-400 hover:text-white">support@loyaltyperkshub.com</a>
+              </p>
+              <p className="text-gray-400 mt-1">
+                <a href="tel:+19083998307" className="text-gray-400 hover:text-white">(908) 399-8307</a>
+              </p>
               <p className="text-gray-400 mt-2 text-sm">
-                2241 Ridgewood Ave, Suite 108<br />
-                Denver, CO 80203<br />
+                9 Johnston Dr<br />
+                Bloomsbury, NJ 08804<br />
                 United States
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400">
-            <p>&copy; 2026 Volt Internal Comms. All rights reserved.</p>
-            <div className="flex items-center gap-4">
-              {/* LinkedIn */}
-              <a href="https://www.linkedin.com/company/voltinternalcomms/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              {/* Google */}
-              <a href="https://share.google/Nl9xEk7kfvDH5ZuOs" target="_blank" rel="noopener noreferrer" aria-label="Google" className="text-gray-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
-                </svg>
-              </a>
+          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col gap-3 text-gray-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Media Delivery Solutions LLC, d/b/a Loyalty Perks Hub. All rights reserved.</p>
+            <p>
+              9 Johnston Dr, Bloomsbury, NJ 08804, United States · <a href="tel:+19083998307" className="text-gray-400 hover:text-white">(908) 399-8307</a>
+            </p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <Link href="/terms" className="text-gray-400 hover:text-white">Terms</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link href="/sms-policy" className="text-gray-400 hover:text-white">SMS Policy</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
             </div>
           </div>
         </div>
