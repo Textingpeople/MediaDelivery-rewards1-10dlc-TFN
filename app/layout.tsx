@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://loyaltyperkshub.com"),
   title: "Loyalty Perks Hub — Employee Recognition & Rewards",
   description: "Loyalty Perks Hub is an employee recognition and rewards platform employers use to celebrate milestones, peer shout-outs and team wins.",
   keywords: "employee recognition, employee rewards, workplace culture, team engagement, peer shout-outs",
@@ -21,22 +22,13 @@ export const metadata: Metadata = {
     description: "Loyalty Perks Hub is an employee recognition and rewards platform employers use to celebrate milestones, peer shout-outs and team wins.",
     url: "https://loyaltyperkshub.com",
     siteName: "Loyalty Perks Hub",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Loyalty Perks Hub — Employee Recognition & Rewards",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Loyalty Perks Hub — Employee Recognition & Rewards",
     description: "Loyalty Perks Hub is an employee recognition and rewards platform employers use to celebrate milestones, peer shout-outs and team wins.",
-    images: ["/logo.png"],
   },
   robots: {
     index: true,
